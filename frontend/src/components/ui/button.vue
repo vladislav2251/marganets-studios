@@ -22,12 +22,7 @@
 
 <script setup lang="ts">
 
-        interface IProps {
-                type: string
-                to: string;
-                background: boolean;
-        };
-        
-        const props = defineProps<IProps>();
+        import type { IButtonProps } from "@/interfaces/button.interface";
+        const props = defineProps<IButtonProps>();
 
 </script>

@@ -9,11 +9,7 @@
 </template>
 
 <script setup lang="ts">
-        interface IProps {
-                bold?: 'font-light' | 'font-normal' | 'font-medium' | 'font-semibold' | 'font-bold' | 'font-extrabold';
-                size: '13' | '16' | '32' | '78';
-                tag: 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
-        };
+        import type { ITypographyProps } from '@/interfaces/typography.interface';
 
-        const props = defineProps<IProps>();
+        const props = defineProps<ITypographyProps>();
 </script>

@@ -5,27 +5,19 @@
             class="w-full h-[3rem] border border-solid border-gray-700 rounded-lg bg-gray-700 bg-opacity-20 p-3"
             type="text" 
             v-bind="$attrs" 
-            :value="modelValue" 
+            :value="props.value" 
             @input="handleInput" 
         />
     </div>
 </template>
 <script setup lang="ts">
     const emit = defineEmits();
-    const props = defineProps({
-        label: {
-            type: String,
-            default: '',
-        },
+    import type { IInputProps } from '@/interfaces/input.interface';
 
-        modelValue: {
-            type: String,
-            default: '',
-        },
-    });
+    const props = defineProps<IInputProps>();
 
     const handleInput = (e: Event) => {
         const value = (e.target as HTMLInputElement).value;
-        emit('update:modelValue', value);
+        emit('update:value', value);
     };
 </script>
