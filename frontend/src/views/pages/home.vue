@@ -1,18 +1,15 @@
 <template>
-        {{  data  }}
+        <div>
+                <Input v-model="Name" label="NAME"/>
+        </div>
+        <div>
+                <Area v-model="TextArea" label="MESSAGE"></Area>
+        </div>
 </template>
 <script setup lang="ts">
-        import { ref, onMounted } from "vue";
-        import dataService from "../../services/modules/data.service"
+        import Input from "@/components/ui/input.vue";
+        import Area from "@/components/ui/textarea.vue";
+        import { ref } from "vue";
 
-        const data = ref([])
-
-        onMounted(async () => {
-                
-                data.value = await dataService.getAll()
-
-                console.log(data.value)
-        });
-
-
+        const Name = ref("");
 </script>
