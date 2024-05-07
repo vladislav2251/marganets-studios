@@ -2,9 +2,9 @@ import axios from "axios";
 
 const HTTP = axios.create({
     baseURL: "https://marganets-studios-default-rtdb.firebaseio.com",
-    responseType: "json",
+    responseType: 'json',
     timeout: 20000,
-    withCredentials: true
+    withCredentials: false,
 });
 
 export default HTTP;

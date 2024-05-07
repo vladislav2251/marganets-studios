@@ -1,11 +1,8 @@
-import HTTP from "../axios";
+import HTTP from "@/services/axios";
 
 export class DataService {
     async getAll() {
         const response = await HTTP.get("/data.json");
-
-        console.log(response.data)
-
         return response.data;
     };
 };
