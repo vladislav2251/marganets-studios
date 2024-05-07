@@ -1,5 +1,5 @@
-
-import { initializeApp } from "firebase/app";
+import firebase from 'firebase/app';
+import 'firebase/firestore'; // если вы используете Firestor
 
 const firebaseConfig = {
   apiKey: "AIzaSyDlJuiY382hHY4O-7mUJ0LhtaJdqT2dxEs",
@@ -11,6 +11,6 @@ const firebaseConfig = {
   measurementId: "G-71SNRN806L"
 };
 
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-export default app;
+export const db = firebase.getApp();
