@@ -1,3 +1,4 @@
+
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
@@ -10,6 +11,6 @@ const firebaseConfig = {
   measurementId: "G-71SNRN806L"
 };
 
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-export default app;
+export const db = firebase.getApp();
