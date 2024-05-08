@@ -2,10 +2,14 @@ import { createRouter, createWebHistory } from 'vue-router';
 import type { RouteRecordRaw } from 'vue-router';
 import siteConfig from '@/config/site';
 
-import Home from '@/views/pages/home.vue';
+import Index from '@/views/pages/index.vue';
+import Imprint from '@/views/pages/imprint.vue';
+import NotFound from '@/views/pages/404.vue';
 
 const routes: RouteRecordRaw[] = [
-        { path: '/', name: 'home', component: Home, meta: { title: `${siteConfig.name} | ${siteConfig.description}` } },
+        { path: '/', name: 'index', component: Index, meta: { title: `${siteConfig.name} | ${siteConfig.description}` } },
+        { path: '/imprint', name: 'imprint', component: Imprint, meta: { title: `Imprint | ${siteConfig.name}` } },
+        { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound, meta: { title: `Page not found | ${siteConfig.name}` } },
 ];
 
 const router = createRouter({
