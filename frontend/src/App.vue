@@ -1,7 +1,8 @@
 <template>
-        <main id="main" class="h-[2000px]">
+        <main id="main">
                 <Header />
                         <RouterView />
+                
         </main>
 </template>
 

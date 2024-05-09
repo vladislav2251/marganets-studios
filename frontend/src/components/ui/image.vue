@@ -1,9 +1,7 @@
 <template>
         <img 
-                :src="src" 
-                :width="width" 
-                :height="height" 
-                :alt="alt" 
+                :src="props.src" 
+                :alt="props.alt" 
                 :loading="isAboveTheFold ? 'eager' : 'lazy'" 
                 decoding="async"
         >
@@ -15,9 +13,5 @@
 
         const props = defineProps<IImageProps>();
 
-        const src = ref<string>(props.metadata.src);
-        const width = ref<number>(props.metadata.width);
-        const height = ref<number>(props.metadata.height);
-        const isAboveTheFold = ref<boolean>(!!props.isAboveTheFold);
         
 </script>

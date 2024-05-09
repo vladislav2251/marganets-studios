@@ -6,7 +6,7 @@
         .color-scheme-dark {
                 color-scheme: dark;
         }
-      
+        
         .mask-radial-faded {
                 mask-image: radial-gradient(circle at center center, black, transparent 75%);
         }
@@ -201,4 +201,24 @@ pre > code.highlight {
 .v-enter-from, 
 .v-leave-to {
         opacity: 0;
+}
+
+@keyframes shiny-badge-slide {
+        0% {
+                transform: translateX(-100%) skew(-16deg);
+        }
+        15%, 100% {
+                transform: translateX(100%) skew(-16deg);
+        }
+}
+      
+.animate-shiny-badge-slide:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%;
+        background-color: #6919ff1a;
+        animation: shiny-badge-slide 6s infinite;
 }

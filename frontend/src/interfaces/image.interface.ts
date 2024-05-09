@@ -1,11 +1,5 @@
-interface IImageMetodata {
-        src: string;
-        width: number;
-        height: number;
-};
-
 export interface IImageProps {
-        metadata: IImageMetodata;
+        src: string;
         alt: string;
         isAboveTheFold?: boolean;
 };
