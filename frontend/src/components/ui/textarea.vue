@@ -1,8 +1,8 @@
 <template>
     <div class="grid gap-1.5">
-        <label class="text-gray-700 font-inter text-xs font-normal leading-4 tracking-normal"> {{ props.label }} </label>
+        <label class="mb-2 block text-sm/none uppercase text-[#96A1BF] peer-disabled:cursor-not-allowed peer-disabled:opacity-70"> {{ props.label }} </label>
         <textarea
-            class="w-full h-[3rem] border border-solid border-gray-700 rounded-lg bg-gray-700 bg-opacity-20 p-3 resize-none"
+            class="peer block max-h-36 min-h-12 w-full appearance-none border border-solid border-gray-700 bg-gray-700 bg-opacity-20 rounded-lg p-3 caret-primary shadow-[0_0_10px,_inset_0_0_10px] shadow-transparent transition-colors focus:border-primary focus:shadow-primary/70 focus:outline-none disabled:cursor-not-allowed disabled:opacity-70"
             type="text" 
             v-bind="$attrs" 
             :value="props.value" 

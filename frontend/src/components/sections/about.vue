@@ -1,11 +1,11 @@
 <template>
-     <section id="about" aria-labelledby="about-heading" class="relative z-10 w-full bg-[#060918]">
+     <section id="about" aria-labelledby="about-heading" class="relative lg:border-b lg:border-[#2e364f] z-10 w-full bg-[#060918]">
           <div class="flex min-h-screen w-full items-center max-lg:flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,min(91.666667%/2,40rem))_minmax(0,min(91.666667%/2,40rem))_minmax(0,1fr)] xl:grid-cols-[minmax(0,1fr)_minmax(0,min(80%/2,40rem))_minmax(0,min(80%/2,40rem))_minmax(0,1fr)]">
           
                <Image 
                     src="/img/weezer.png"
                     alt="A friend and I are developing websites and we have an idea that we hope will interest you"
-                    class="h-full max-h-screen bg-neutrals-800 object-cover object-center lg:col-start-1 lg:col-end-3"
+                    class="h-full max-h-screen w-full bg-neutrals-800 object-cover object-center lg:col-start-1 lg:col-end-3"
                />
 
                <div class="w-full py-28 max-lg:mx-auto max-lg:w-11/12 max-lg:max-w-7xl lg:ps-10 xl:ps-20">

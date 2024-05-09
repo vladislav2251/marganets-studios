@@ -26,7 +26,8 @@
     "vue-typed-js": "^0.1.2",
     "vue-typer": "^1.2.0",
     "vue-writer": "^2.0.1",
-    "vue3-highlightjs": "^1.0.5"
+    "vue3-highlightjs": "^1.0.5",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",

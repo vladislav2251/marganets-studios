@@ -202,15 +202,6 @@ pre > code.highlight {
 .v-leave-to {
         opacity: 0;
 }
-
-@keyframes shiny-badge-slide {
-        0% {
-                transform: translateX(-100%) skew(-16deg);
-        }
-        15%, 100% {
-                transform: translateX(100%) skew(-16deg);
-        }
-}
       
 .animate-shiny-badge-slide:after {
         content: '';
@@ -221,4 +212,23 @@ pre > code.highlight {
         height: 100%;
         background-color: #6919ff1a;
         animation: shiny-badge-slide 6s infinite;
+}
+
+.animate-marquee {
+        animation: marquee 15s linear infinite;
+}    
+
+@keyframes shiny-badge-slide {
+        0% {
+                transform: translateX(-100%) skew(-16deg);
+        }
+        15%, 100% {
+                transform: translateX(100%) skew(-16deg);
+        }
+}
+
+@keyframes marquee {
+        100% {
+                transform: translate(-100%);
+        }
 }
