@@ -1,20 +1,15 @@
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, watch } from 'vue';
 
 function useLockBody(isLocked: any) {
-     const originalOverflowStyle = ref('');
+     const isVisibleLocked = ref(isLocked);
 
-     function lockBody() {
-          originalOverflowStyle.value = window.getComputedStyle(document.body).overflow;
-          document.body.style.overflow = isLocked ? 'hidden' : originalOverflowStyle.value;
-     };
-
-     onMounted(() => {
-          lockBody();
+     watch(() => isLocked, (newValue) => {
+          isVisibleLocked.value = newValue;
      });
 
-     onUnmounted(() => {
-          document.body.style.overflow = originalOverflowStyle.value;
-     });
+     document.body.style.overflow = isLocked 
+          ? 'hidden' 
+          : 'auto';
 };
 
 export default useLockBody;

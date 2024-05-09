@@ -99,6 +99,12 @@ pre[class*='language-'] {
 .token.cdata {
         color: #6f7a9b;
 }
+
+.via-neutrals-200:after {
+        content: var(--tw-content);
+        --tw-gradient-to: rgb(199 208 229 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), #C7D0E5 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
       
 .token.namespace {
 opacity: 0.7;
@@ -185,4 +191,14 @@ pre > code.highlight {
         width: calc(100% + 1.5rem);
         position: relative;
         left: -0.75rem;
+}
+
+.v-enter-active, 
+.v-leave-active {
+        transition: opacity .5s ease-in-out;
+}
+    
+.v-enter-from, 
+.v-leave-to {
+        opacity: 0;
 }

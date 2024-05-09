@@ -5,7 +5,6 @@ function useScrollTreshold(threshold: number) {
 
      function updateScrollState() {
           isScrollThresholdPassed.value = window.scrollY > threshold;
-          console.log("Threshold passed:", isScrollThresholdPassed.value);
      };
 
      onMounted(() => {
