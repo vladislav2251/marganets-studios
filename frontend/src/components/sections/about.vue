@@ -29,8 +29,6 @@
 
 <script setup lang="ts">
 
-     import { ref } from 'vue';
-
      import Image from '@/components/ui/image.vue';
      import Typography from '@/components/ui/typography.vue';
      import Caption from '@/components/ui/caption.vue';

@@ -14,7 +14,7 @@
 
     const sizeClass = computed(() => {
         return {
-            xs: 'w-3 h-3',
+            xs: 'w-[28px] h-[28px]',
             sm: 'w-4 h-4',
             md: 'w-6 h-6',
             lg: 'w-8 h-8',
